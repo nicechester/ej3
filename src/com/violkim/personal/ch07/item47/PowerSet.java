@@ -26,7 +26,7 @@ public class PowerSet {
 
     @Test
     public void testPowerSet() {
-        Set<String> set = new HashSet<>() {{ add("a"); add("b"); add("c"); }};
+        Set<String> set = new HashSet<>() {{ add("a"); add("b"); add("c"); add("mark");}};
         Collection<?> powerSet = PowerSet.of(set);
         System.out.println(powerSet);
     }
