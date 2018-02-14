@@ -20,7 +20,7 @@ public class TopTen {
 
     @Test
     public void testFreq() {
-        Map<String, Integer> freq = new HashMap<>() {{
+        Map<String, Integer> freq = new HashMap<String, Integer>() {{
             put("flower", 50);
             put("love", 100);
             put("friend", 80);
