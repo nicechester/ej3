@@ -1,24 +1,32 @@
 package com.violkim.personal.ch04.item17;
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 public final class Complex {
-    public final Complex ZERO = new Complex(0, 0);
-    public final Complex ONE = new Complex(1, 0);
-    public final Complex I = new Complex(0, 1);
+    public static final Complex ZERO = new Complex(0, 0);
+    public static final Complex ONE = new Complex(1, 0);
+    public static final Complex I = new Complex(0, 1);
 
     private final double re;
     private final double im;
 
-    public Complex(double re, double im) {
+//    public Complex(double re, double im) {
+//        this.re = re;
+//        this.im = im;
+//    }
+
+    private Complex(double re, double im) {
         this.re = re;
         this.im = im;
     }
 
-//    private Complex(double re, double im) {
-//        this.re = re;
-//        this.im = im;
-//    }
-//
-//    public static Complex valueOf(double re, double im) { return new Complex(re, im); }
+    public static Complex valueOf(double re, double im) {
+        if (re==0 && im==0)
+            return ZERO;
+        return new Complex(re, im);
+    }
 
     public double realPart() { return re; }
     public double imaginaryPart() { return im; }
