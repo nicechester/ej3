@@ -28,12 +28,17 @@ public class WildCard {
         so.add("Charlie");
         so.add(299);
         for (Object o: so) {
-            System.out.println(o);
-            if (o instanceof String) {
+            System.out.println(o.getClass());
+            if (o.getClass()==String.class) {
                 System.out.println("It's a string!");
+                printString((String)o);
             } else if (o instanceof Integer) {
                 System.out.println("It's an integer!");
             }
         }
+    }
+
+    private void printString(String s) {
+        System.out.printf("Input string is='%s'", s);
     }
 }
