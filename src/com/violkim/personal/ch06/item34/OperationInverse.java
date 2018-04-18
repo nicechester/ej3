@@ -22,6 +22,6 @@ public class OperationInverse {
     @Test
     public void inverseTest() {
         Arrays.stream(Operation2.values())
-                .forEach(o -> System.out.printf("inverse(%s) is %s\n", o, inverse(o)));
+                .forEach(o -> System.out.printf("inverse(%s) is %s. %f, %f\n", o, inverse(o), o.apply(10, 8), inverse(o).apply(10, 8)));
     }
 }
