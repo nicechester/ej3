@@ -13,7 +13,7 @@ public class TestTextStyles {
     @Test
     public void testBits() {
         TextBits textStyles = new TextBits();
-        textStyles.applyStyles(TextBits.STYLE_BOLD | TextBits.STYLE_UNDERLINE);
+        textStyles.applyStyles(TextBits.STYLE_BOLD | TextBits.STYLE_UNDERLINE); // 001 or 100 = 101
         System.out.printf("Selected styles are %s\n", getStyles(textStyles.getStyles()));
     }
 
