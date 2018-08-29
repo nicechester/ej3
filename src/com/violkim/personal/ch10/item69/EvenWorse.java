@@ -9,11 +9,11 @@ public class EvenWorse {
 
     @Before
     public void init() {
-        final int[] iii = new int[100];
+        final int[] ary = new int[100];
         runs = new Runnable[SIZE];
         for (int i=0; i<SIZE; i++) {
-            final int ii = i;
-            runs[i] = () -> System.out.println(iii[ii]);
+            final int ix = i;
+            runs[i] = () -> System.out.println(ary[ix]);
         }
     }
 
@@ -24,7 +24,7 @@ public class EvenWorse {
             while(true)
                 runs[i++].run();
         } catch (ArrayIndexOutOfBoundsException e) {
-//            e.printStackTrace();
+            e.printStackTrace();
         }
     }
 }
